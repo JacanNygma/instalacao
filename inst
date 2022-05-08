@@ -1,13 +1,12 @@
 #!/bin/bash
-[[ $(screen -list| grep -c 'bot_teste') == '0' ]] && {
-    clear
-    echo -e "\E[44;1;37m     ATIVACÃO BOT SSH TESTE     \E[0m"
-    echo ""
-    echo -ne "\n\033[1;32mINFORME O TOKEN\033[1;37m: "; read token
-    cd $HOME/BOT
-    screen -dmS bot_teste ./botssh $token > /dev/null 2>&1
-    clear && echo "BOT ATIVADO"
-} || {
-    screen -r -S "bot_teste" -X quit
-    clear && echo "BOT DESATIVADO"
-}
+clear
+echo -e "\E[44;1;37m     INSTALACAO BOT SSH TESTE     \E[0m"
+echo -e "\nINSTALANDO AGUARDE...."
+apt update -y > /dev/null 2>&1 && apt install unzip at jq curl -y > /dev/null 2>&1
+mkdir $HOME/BOT
+cd $HOME/BOT && wget https://github.com/JacanNygma/instalacao/raw/main/botteste.zip
+unzip botteste.zip > /dev/null 2>&1 && rm botteste.zip > /dev/null 2>&1
+chmod +x $(ls)
+mv botteste /bin/botteste
+clear && echo -e "INSTALADO COM SUCESSO !\nPARA ATIVAR EXECULTE O COMANDO botteste"
+cd $HOME && rm inst-botteste > /dev/null 2>&1
