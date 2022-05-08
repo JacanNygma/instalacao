@@ -4,11 +4,11 @@ clear
 source ShellBot.sh
 touch lista
 [[ -z $1 ]] && {
-    clear && echo "5028870751:AAH1TFvYtxdhUqgbLhG1BLrBk2x9SKOt4To" && return 0
+    clear && echo "INFORME O TOKEN" && return 0
 }
 # Informações Server 2
-ip_server2="ssl.brasilnom.tk"
-senha_server2="nygma"
+ip_server2="SEU-IP-AQUI"
+senha_server2="SUA-SENHA-AQUI"
 # Informações Server 3
 ip_server3="SEU-IP-AQUI"
 senha_server3="SUA-SENHA-AQUI"
